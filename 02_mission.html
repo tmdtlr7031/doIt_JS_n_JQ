@@ -8,9 +8,7 @@
 </head>
 <body>
     <script>
-
         // 1번 문제
-
         var price1 = 3000; // 교통
         var price2 = 6000; // 식비
         var price3 = 3000; // 음료
@@ -18,8 +16,6 @@
         // 삼항연산자 사용, 하루적정지출 1만원 초과 시 "~원 초과" 출력 / 아닌 경우 "돈 관리 잘 했어요!" 출력
         var result = price1+price2+price3
         document.write(result > 10000 ? (10000-result)+"원 초과" : "돈 관리 잘 했어요!") // 숫자형이 있어도 자동 형변환이 이뤄지는 것을 이용
-
-        
     </script>
     
     <div style="margin: 30px">
@@ -48,7 +44,6 @@
         </table>
     </div>
     <script>
-
         function goinput(){
             // 2번 문제 - promt 이용
             var lastQuarter = prompt("4분기 판매량을 입력해주세요");
@@ -61,12 +56,7 @@
             
             // 테이블에 입력하는 걸 먼저 써도 alert창이 먼저 뜨고 값이 입력됨.. 우선순위가 있는 하다
             alert(lastQuarter >= avg ? "판매량이 평균 이상입니다." : "판매량이 평균 미달입니다."); 
-
-            
-
         }
-
-
     </script>
 </body>
 </html>
