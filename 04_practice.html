@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var tv = new Object(); // tv라는 객체 생성
+        tv.color = "white"; // color라는 속성값을 white로
+        tv.price = 300000;  // price라는 속성값을 300000로
+
+        // info라는 속성값을 함수로. 자바스크립트에서 함수도 값이 됨
+        tv.info = function(){ 
+            document.write("tv색상 : "+this.color, "<br/>");
+            document.write("tv가격 : "+this.price, "<br/>");
+        }
+        document.write("<h1>tv 객체 메서드 호출</h1>");
+        tv.info(); // 함수 호출
+
+        // 객체 생성하는 방법(2), 속성 : 값 순서로 작성
+        var car = {
+            color : "black",
+            price : 500000,
+            info : function(){
+                document.write("car색상 : " + this.color, "<br/>");
+                document.write("car가격 : " + this.price, "<br/>");
+            }
+        };
+        document.write("<h1>car 객체 메서드 호출</h1>");
+        car.info();
+    </script>
+</body>
+</html>

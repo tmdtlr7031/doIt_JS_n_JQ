@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        // 문제 1번
+        var phoneNum = '010-1234-5678';
+        var result = phoneNum.substring(0,9);
+        document.write(result,'****<br/>');
+
+        var imgSrc = 'images/bnt_out.jpg';
+        var result2 = imgSrc.replace('out','over'); // 바꾸려는 곳의 위치를 안 알려줘도 쉽게 replace 가능함.
+        document.write(result2, '<br/>');
+
+
+        // 문제 2번 - 메뉴 랜덤 선택
+        var menu = new Array("짜장면", "돈가스", "된장국", "김치찌개", "회덮밥"); // index = 0~4
+        var menuNum = Math.floor(Math.random()*5); // 0부터 5미만 난수
+        var result3 = menu[menuNum];
+        document.write(result3);
+
+    </script>
+</body>
+</html>
