@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="jquery-3.4.1.js"></script>
+    <script>
+
+        $(function(){
+            // 문제 1 - not()메소드를 이용하여 <li>첫번째 요소만 제외시킨 <li> 배경을 노란색으로
+            $("#myList li").not(":first").css({"background-color":"yellow"});
+
+            // 문제 2 - 제이쿼리 위치탐색자를 이용, 3번째 <li>태그만 선택하여 배경을 파란색으로 적용
+            $("#myList li").eq(2).css({"background-color":"blue"}); // eq의 숫자는 index로 0부터 시작
+        })
+
+    </script>
+</head>
+<body>
+   <ul id="myList">
+       <li>내용1</li>
+       <li>내용2</li>
+       <li>내용3</li>
+       <li>내용4</li>
+   </ul>
+</body>
+</html>
