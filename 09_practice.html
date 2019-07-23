@@ -7,71 +7,11 @@
     <title>Document</title>
     <script src="jquery-3.4.1.js"></script>
     <script>
-        /* 
-           효과메서드 '기본형' => fadeTo는 가속도 대신 투명도(1에 가까울수록 선명)
-           $("요소선택").효과메서드(효과소요시간, 가속도, 콜백 함수);
-           - 효과소요시간 : slow, normal, fast, 1000(1초), 500(0.5초) ...
-           - 가속도 : swing : 시작과 끝은 느리게 중간은 빠른속도 / linear : 일정한 속도
-           - 콜백함수 : 노출과 숨김 효과가 끝난 후에 실행할 함수로 생략가능
-        */
-
-        $(function(){
-            $(".btn2").hide();
-
-            $(".btn1").on("click", function(){
-                $(".box").slideUp(1000, "linear",function(){ // slideUp이 진행되고 btn1은 숨김, btn2 노출
-                    $(".btn1").hide();
-                    $(".btn2").show();
-                });
-            });          
-
-            
-            $(".btn2").on("click", function(){
-                $(".box").fadeIn(1000, "swing",function(){
-                    $(".btn2").hide();
-                    $(".btn1").show();
-                });
-            });          
-
-            $(".btn3").on("click", function(){
-                $(".box").slideToggle(1000, "linear")
-            });
-
-            $(".btn4").on("click", function(){
-                $(".box").fadeTo("fast", 0.3);
-            });
-
-            $(".btn5").on("click", function(){
-                $(".box").fadeTo("fast", 1);
-            });
-
-        });
+        
     </script>
-    <style>
-        .content{
-            width : 400px;
-            background-color : #eee;
-        }
-    </style>
+    
 </head>
 <body>
-    <p>
-        <button class="btn1">slideUp</button>   
-        <button class="btn2">fadeIn</button>   
-    </p>
-    <p>
-        <button class="btn3">toggleSlide</button>   
-    </p>
-    <p>
-        <button class="btn4">fadeTo(0.3)</button>   
-        <button class="btn5">fadeTo(1)</button>   
-    </p>
-
-    <div class="box">
-        <div class="content">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam neque fugiat, tenetur voluptatibus quidem cupiditate <br/>
-            maiores ut veniam qui voluptatum optio voluptates rerum inventore porro dolor pariatur obcaecati non quo?
-        </div>
-    </div>
+    
 </body>
 </html>
