@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="jquery-3.4.1.js"></script>
+    <script>
+        $(function(){
+            var beforeMenu = null;
+            
+            $(".gnb button a").on("mouseover focus", function(){
+                if(beforeMenu)beforeMenu.css({background : "none"}); // 다른 버튼으로 마우스 오버 시 기존 배경 지우기
+                $(this).css({"background-color" : "#0ff"}); // 해당 버튼에 마우스 오버시 배경색 지정
+                beforeMenu = $(this);
+                
+            });
+
+            $(".gnb").on("mouseleave", function(){
+                $(beforeMenu).css({"background" : "none"}); // div영역에서 빠져나가면 배경 제거
+            });
+        });
+    </script>
+</head>
+<body>
+    <ul class="gnb">
+        <button><a href="#">menu1</a></button>
+        <button><a href="#">menu2</a></button>
+        <button><a href="#">menu3</a></button>
+        <button><a href="#">menu4</a></button>
+        <button><a href="#">menu5</a></button>
+        <button><a href="#">menu6</a></button>
+        <button><a href="#">menu7</a></button>
+        <button><a href="#">menu8</a></button>
+    </ul>
+</body>
+</html>
